@@ -81,19 +81,21 @@ function dogCardMaker({ imageURL, breed }) {
 // console.log("response.DATA \n \n", response.data);
 // console.log("response.data.MESSAGE \n \n", response.data.message);
 
-axios
-  .get("https://dog.ceo/api/breed/husky/images/random/6")
-  .then((response) => {
-    const images = response.data.message;
-    images.forEach((image) => {
-      const dogCard = dogCardMaker({ imageURL: image, breed: "Husky" });
-      // console.log(dogCard);
-      entryPoint.append(dogCard);
+function getDogs(breed, count) {
+  axios
+    .get("https://dog.ceo/api/breed/husky/images/random/6")
+    .then((response) => {
+      const images = response.data.message;
+      images.forEach((image) => {
+        const dogCard = dogCardMaker({ imageURL: image, breed: "Husky" });
+        // console.log(dogCard);
+        entryPoint.append(dogCard);
+      });
+    })
+    .catch((error) => {
+      console.log("something went wrong", error);
     });
-  })
-  .catch((error) => {
-    console.log("something went wrong", error);
-  });
+}
 // 👉 (OPTIONAL) TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
 
