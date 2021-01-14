@@ -77,13 +77,13 @@ function dogCardMaker({ imageURL, breed }) {
 //    * ON FAILURE: log the error to the console
 //    * IN ANY CASE: log "done" to the console
 
+// console.log("RESPONSE \n \n ", response);
+// console.log("response.DATA \n \n", response.data);
+// console.log("response.data.MESSAGE \n \n", response.data.message);
+
 axios
   .get("https://dog.ceo/api/breed/husky/images/random/6")
-  .then((response) => {
-    console.log("RESPONSE \n \n ", response);
-    console.log("response.DATA \n \n", response.data);
-    console.log("response.data.MESSAGE \n \n", response.data.message);
-  })
+  .then((response) => {})
   .catch((error) => {
     debugger;
   });
