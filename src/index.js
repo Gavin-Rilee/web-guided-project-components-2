@@ -102,6 +102,10 @@ function getDogs(breed, count) {
 // 👉 (OPTIONAL) TASK 7- Put a button in index.html to 'get dogs' and add a click
 // event listener that executes `getDogs`
 
+document.querySelector("button").addEventListener("click", (evt) => {
+  getDogs();
+});
+
 // 👉 (OPTIONAL) TASK 8- Import the breeds from `breeds.js`
 // or request them from https://lambda-times-api.herokuapp.com/breeds
 // and loop over them, fetching a dog at each iteration
