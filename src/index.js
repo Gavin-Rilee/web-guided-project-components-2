@@ -84,7 +84,7 @@ function dogCardMaker({ imageURL, breed }) {
 
 function getDogs(breed, count) {
   axios
-    .get("https://dog.ceo/api/breed/husky/images/random/6")
+    .get(`https://dog.ceo/api/breed/${breed}/images/random/${count}`)
     .then((response) => {
       const images = response.data.message;
       images.forEach((image) => {
