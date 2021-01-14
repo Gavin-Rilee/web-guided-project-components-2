@@ -87,8 +87,8 @@ axios
     const images = response.data.message;
     images.forEach((image) => {
       const dogCard = dogCardMaker({ imageURL: image, breed: "Husky" });
+      console.log(dogCard);
     });
-    console.log(dogCard);
   })
   .catch((error) => {
     debugger;
