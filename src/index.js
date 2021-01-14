@@ -1,6 +1,7 @@
 // Imports at the top of the file!
 // We never nest imports inside blocks of code!
 import axios from "axios";
+import { breeds } from "./breeds";
 // console.log(axios);
 const result = axios.get("https://lambda-times-api.herokuapp.com/friends");
 // console.log(result);
