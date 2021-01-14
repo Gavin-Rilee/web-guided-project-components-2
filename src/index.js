@@ -1,9 +1,15 @@
 // Imports at the top of the file!
 // We never nest imports inside blocks of code!
 import axios from "axios";
-console.log(axios);
+// console.log(axios);
 const result = axios.get("https://lambda-times-api.herokuapp.com/friends");
-console.log(result);
+// console.log(result);
+
+result.then((futureData) => {
+  // future code for when the data actually arrives
+  // freedom to assume that the data is here
+  console.log(futureData);
+});
 // axios responds with JSON data
 // return value of axios is a Promise - representation of a future value
 
