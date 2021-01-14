@@ -80,7 +80,7 @@ function dogCardMaker({ imageURL, breed }) {
 axios
   .get("https://dog.ceo/api/beed/husky/images/random/6")
   .then((response) => {
-    debugger;
+    console.log("RESPONSE \n \n ", response);
   })
   .catch((error) => {
     debugger;
