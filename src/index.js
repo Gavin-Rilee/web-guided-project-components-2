@@ -82,17 +82,17 @@ function dogCardMaker({ imageURL, breed }) {
 // console.log("response.data.MESSAGE \n \n", response.data.message);
 
 axios
-  .get("https://dog.ceo/api/breed/husky/images/random/6")
+  .get("https://dog.ceo/api/bred/husky/images/random/6")
   .then((response) => {
     const images = response.data.message;
     images.forEach((image) => {
       const dogCard = dogCardMaker({ imageURL: image, breed: "Husky" });
-      console.log(dogCard);
+      // console.log(dogCard);
       entryPoint.append(dogCard);
     });
   })
   .catch((error) => {
-    debugger;
+    console.log("something went wrong", error);
   });
 // 👉 (OPTIONAL) TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
