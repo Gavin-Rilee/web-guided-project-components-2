@@ -2,6 +2,10 @@
 // We never nest imports inside blocks of code!
 import axios from "axios";
 console.log(axios);
+const result = axios.get();
+console.log(result);
+// axios responds with JSON data
+// return value of axios is a Promise - representation of a future value
 
 // 👉 TASK 1- Test out the following endpoints:
 
