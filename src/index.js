@@ -82,7 +82,9 @@ axios
   .then((response) => {
     debugger;
   })
-  .catch(() => {});
+  .catch((error) => {
+    debugger;
+  });
 // 👉 (OPTIONAL) TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
 
