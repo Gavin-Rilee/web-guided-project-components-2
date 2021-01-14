@@ -81,6 +81,7 @@ axios
   .get("https://dog.ceo/api/breed/husky/images/random/6")
   .then((response) => {
     console.log("RESPONSE \n \n ", response);
+    console.log("response.data \n \n", response.data);
   })
   .catch((error) => {
     debugger;
