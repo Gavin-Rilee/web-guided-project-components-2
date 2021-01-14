@@ -18,6 +18,11 @@ axios
     console.log(error);
   });
 
+axios
+  .get("https://lambda-times-api.herokuapp.com/friends")
+  .then(() => {})
+  .catch(() => {});
+
 console.log("3. we requested the data with axios");
 // axios responds with JSON data
 // return value of axios is a Promise - representation of a future value
