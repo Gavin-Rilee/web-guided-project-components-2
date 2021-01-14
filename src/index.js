@@ -88,7 +88,7 @@ function getDogs(breed, count) {
     .then((response) => {
       const images = response.data.message;
       images.forEach((image) => {
-        const dogCard = dogCardMaker({ imageURL: image, breed: "Husky" });
+        const dogCard = dogCardMaker({ imageURL: image, breed: breed });
         // console.log(dogCard);
         entryPoint.append(dogCard);
       });
