@@ -103,8 +103,12 @@ function getDogs(breed, count) {
 // 👉 (OPTIONAL) TASK 7- Put a button in index.html to 'get dogs' and add a click
 // event listener that executes `getDogs`
 
+// document.querySelector("button").addEventListener("click", (evt) => {
+//   getDogs();
+// });
+
 document.querySelector("button").addEventListener("click", (evt) => {
-  // getDogs();
+  breeds.forEach((breed) => getDogs(breed, 1));
 });
 
 // breeds.forEach((breed) => {
