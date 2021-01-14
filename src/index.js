@@ -107,15 +107,15 @@ document.querySelector("button").addEventListener("click", (evt) => {
   // getDogs();
 });
 
-breeds.forEach((breed) => {
-  axios
-    .get(`https://dog.ceo/api/breed/${breed}/images/random/1`)
-    .then((res) => {
-      res.data.message.forEach((img) => {
-        entryPoint.appendChild(dogCardMaker({ imageURL: img, breed: breed }));
-      });
-    });
-});
+// breeds.forEach((breed) => {
+//   axios
+//     .get(`https://dog.ceo/api/breed/${breed}/images/random/1`)
+//     .then((res) => {
+//       res.data.message.forEach((img) => {
+//         entryPoint.appendChild(dogCardMaker({ imageURL: img, breed: breed }));
+//       });
+//     });
+// });
 
 // 👉 (OPTIONAL) TASK 8- Import the breeds from `breeds.js`
 // or request them from https://lambda-times-api.herokuapp.com/breeds
