@@ -104,7 +104,17 @@ function getDogs(breed, count) {
 // event listener that executes `getDogs`
 
 document.querySelector("button").addEventListener("click", (evt) => {
-  getDogs();
+  // getDogs();
+});
+
+breeds.forEach((breed) => {
+  axios
+    .get(`https://dog.ceo/api/breed/${breed}/images/random/1`)
+    .then((res) => {
+      res.data.message.forEach((img) => {
+        entryPoint.appendChild(dogCardMaker({ imageURL: img, breed: breed }));
+      });
+    });
 });
 
 // 👉 (OPTIONAL) TASK 8- Import the breeds from `breeds.js`
