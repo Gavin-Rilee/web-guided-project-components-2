@@ -7,11 +7,16 @@ const result = axios.get("https://lambda-times-api.herokuapp.com/friends");
 
 console.log("1. about to fetch the data");
 
-result.then((futureData) => {
-  // future code for when the data actually arrives
-  // freedom to assume that the data is here
-  console.log("2. here is the future data", futureData);
-});
+axios
+  .get("https://lambda-times-api.herokuapp.com/friends")
+  .then((futureData) => {
+    // future code for when the data actually arrives
+    // freedom to assume that the data is here
+    console.log("2. here is the future data", futureData);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 console.log("3. we requested the data with axios");
 // axios responds with JSON data
