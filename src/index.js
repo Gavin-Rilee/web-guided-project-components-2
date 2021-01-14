@@ -5,14 +5,14 @@ import axios from "axios";
 const result = axios.get("https://lambda-times-api.herokuapp.com/friends");
 // console.log(result);
 
-console.log("1. about to fetch the data");
+// console.log("1. about to fetch the data");
 
 axios
   .get("https://lambda-times-api.herokuapp.com/friends")
   .then((futureData) => {
     // future code for when the data actually arrives
     // freedom to assume that the data is here
-    console.log("2. here is the future data", futureData);
+    // console.log("2. here is the future data", futureData);
   })
   .catch((error) => {
     console.log(error);
@@ -23,7 +23,7 @@ axios
   .then(() => {})
   .catch(() => {});
 
-console.log("3. we requested the data with axios");
+// console.log("3. we requested the data with axios");
 // axios responds with JSON data
 // return value of axios is a Promise - representation of a future value
 
@@ -78,7 +78,7 @@ function dogCardMaker({ imageURL, breed }) {
 //    * IN ANY CASE: log "done" to the console
 
 axios
-  .get("https://dog.ceo/api/beed/husky/images/random/6")
+  .get("https://dog.ceo/api/breed/husky/images/random/6")
   .then((response) => {
     console.log("RESPONSE \n \n ", response);
   })
