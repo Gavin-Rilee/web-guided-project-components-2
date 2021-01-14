@@ -78,7 +78,7 @@ function dogCardMaker({ imageURL, breed }) {
 //    * IN ANY CASE: log "done" to the console
 
 axios
-  .get("https://dog.ceo/api/breed/husky/images/random/6")
+  .get("https://dog.ceo/api/beed/husky/images/random/6")
   .then((response) => {
     debugger;
   })
